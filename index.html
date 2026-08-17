@@ -297,7 +297,7 @@
     let BUILDERS = [];
     let teamData = [];
     let currentView = 'roster';
-    let GITHUB_TOKEN = localStorage.getItem('github_token') || '';
+    let GITHUB_TOKEN = '***';
     let isLoading = false;
 
     async function loadBuilders() {
@@ -314,11 +314,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      if (GITHUB_TOKEN) {
-        showMainApp();
-        loadTeamData();
-      } else {
-        document.getElementById('token-setup').classList.remove('hidden');
+     
       }
       setupNavigation();
     });
